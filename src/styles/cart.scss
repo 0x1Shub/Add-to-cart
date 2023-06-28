@@ -8,6 +8,7 @@
     >main {
         padding: 2rem;
         overflow-y: auto;
+        color: $primarydark;
 
         &::-webkit-scrollbar {
             display: none;
@@ -82,6 +83,7 @@
             height: 30px;
             display: grid;
             place-items: center;
+            color: $primarydark;
         }
     }
 
@@ -90,6 +92,7 @@
         font-size: 1.5rem;
         display: inline-block;
         margin: auto;
+        color: $primarydark;
 
         &:hover {
             color: $secondary;
