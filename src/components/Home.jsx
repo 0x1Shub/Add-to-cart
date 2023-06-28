@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 import toast from "react-hot-toast";
-
+import { useDispatch } from "react-redux";
 import img1 from "../assets/macbook.png";
 import img2 from "../assets/shoes.png";
 
@@ -20,13 +20,13 @@ const Home = () => {
         },
     ];
 
+    const dispatch = useDispatch();
 
     const addToCartHandler = (options) => {
-        console.log(options);
+        dispatch({ type: "addToCart", payload: options });
+        dispatch({ type: "calculatePrice" });
         toast.success("Added To Cart");
     };
-
-
     return (
         <div className="home">
             {productList.map((i) => (
@@ -43,7 +43,6 @@ const Home = () => {
     );
 };
 
-
 const ProductCard = ({ name, id, price, handler, imgSrc }) => (
     <div className="productCard">
         <img src={imgSrc} alt={name} />
@@ -55,6 +54,4 @@ const ProductCard = ({ name, id, price, handler, imgSrc }) => (
     </div>
 );
 
-
-
-export default Home
+export default Home;
