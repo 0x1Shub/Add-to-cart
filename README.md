@@ -1,5 +1,5 @@
 # About Project
-This is react js project using react redux to developed add to cart page.
+This is react js project using react redux to developed add to cart page.\
 You can checkout that project here [add-to-cart](https://add-to-cart-self.vercel.app)
  
 # Getting Started with Create React App
